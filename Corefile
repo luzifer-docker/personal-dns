@@ -8,5 +8,5 @@
   errors
 
   # Default log format with stripped IP:Port prefix
-  log . "[{when}] {>id} "{type} {class} {name} {proto} {size} {>do} {>bufsize}" {rcode} {>rflags} {rsize} {duration}"
+  log . "[{when}] {>id} {type} {class} {name} {proto} {size} {>do} {>bufsize} {rcode} {>rflags} {rsize} {duration}"
 }
