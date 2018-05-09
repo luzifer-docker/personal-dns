@@ -1,0 +1,8 @@
+#{% for tld, to in entries.items() %}
+zone "{{tld}}" in {
+  type static-stub;
+  server-addresses { {{ to | join('; ') }}; };
+};
+#{% endfor %}
+
+# vim: set ft=named:

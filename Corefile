@@ -1,0 +1,10 @@
+. {
+  hosts /etc/bind/blacklist {
+    fallthrough
+  }
+
+  forward . 127.0.0.1:1053
+
+  errors
+  log
+}
