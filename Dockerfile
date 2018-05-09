@@ -4,7 +4,7 @@ COPY . /src
 WORKDIR /src
 
 RUN set -ex \
- && apk --no-cache add make \
+ && apk --no-cache add curl make \
  && pip install -r requirements.txt \
  && python build_stubs.py \
  && make blacklist
