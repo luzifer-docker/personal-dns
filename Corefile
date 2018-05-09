@@ -6,5 +6,7 @@
   forward . 127.0.0.1:1053
 
   errors
-  log
+
+  # Default log format with stripped IP:Port prefix
+  log . "[{when}] {>id} "{type} {class} {name} {proto} {size} {>do} {>bufsize}" {rcode} {>rflags} {rsize} {duration}"
 }
