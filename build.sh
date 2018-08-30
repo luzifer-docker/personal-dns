@@ -12,7 +12,7 @@ DUMB_INIT_VERSION=$(curl -sSfL 'https://lv.luzifer.io/catalog-api/dumb-init/late
 [ -z "${DUMB_INIT_VERSION}" ] && { exit 1; }
 
 # Install tools
-curl -sSfL https://github.com/coredns/coredns/releases/download/v${COREDNS_VERSION}/coredns_${COREDNS_VERSION}_linux_amd64.tgz | \
+curl -sSfL https://github.com/coredns/coredns/releases/download/v${COREDNS_VERSION}/release.coredns_${COREDNS_VERSION}_linux_amd64.tgz | \
   tar -x -z -C /usr/local/bin
 
 curl -sSfLo /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${DUMB_INIT_VERSION}/dumb-init_${DUMB_INIT_VERSION}_amd64
