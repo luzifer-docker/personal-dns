@@ -1,0 +1,7 @@
+# Server health check address - not to be removed
+0.0.0.0 health.server.test
+
+# Block annoying websites
+0.0.0.0 facebook.com
+0.0.0.0 facebook.net
+0.0.0.0 taz.de
