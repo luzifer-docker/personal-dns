@@ -4,4 +4,5 @@
 # Block annoying websites
 0.0.0.0 facebook.com
 0.0.0.0 facebook.net
+0.0.0.0 www.facebook.com
 0.0.0.0 taz.de
