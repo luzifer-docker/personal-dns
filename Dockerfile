@@ -1,12 +1,15 @@
-FROM python:3-alpine as builder
+FROM golang:alpine as builder
 
 COPY . /src
 WORKDIR /src
 
 RUN set -ex \
- && apk --no-cache add curl make \
- && pip install -r requirements.txt \
- && python build_stubs.py \
+ && apk --no-cache add \
+      curl \
+      git \
+      make \
+ && go get -v github.com/Luzifer/rootzone \
+ && rootzone >named.stubs \
  && make blacklist
 
 # ------
