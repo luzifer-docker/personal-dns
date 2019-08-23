@@ -5,6 +5,7 @@ WORKDIR /src
 
 RUN set -ex \
  && apk --no-cache add \
+      bash \
       curl \
       git \
       make \
