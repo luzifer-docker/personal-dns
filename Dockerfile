@@ -10,7 +10,7 @@ RUN set -ex \
       git \
       make \
  && go get -v \
-      github.com/Luzifer/korvike\
+      github.com/Luzifer/named-blacklist \
       github.com/Luzifer/rootzone \
  && rootzone >named.stubs \
  && make blacklist

@@ -1,4 +1,6 @@
+export GIT_VERSION:=$(shell git describe --tags --always)
+
 default:
 
 blacklist:
-	bash -x build_blacklist.sh
+	named-blacklist --config blacklist-config.yaml >named.blacklist
