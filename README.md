@@ -9,7 +9,7 @@ The purpose is to be fully independent from provider and third-party DNS servers
 - No DNS query is sent to your providers DNS servers
 - You decide which domains are available to you, no third party company
 - On every build a current list of [IANA](https://www.iana.org/domains/root/db) and [OpenNIC](https://wiki.opennic.org/opennic/dot) registered TLDs is loaded together with their authorative nameservers
-- The container includes a [blacklist](https://github.com/StevenBlack/hosts) blocking quite a lot of crap
+- The container includes a blacklist generated from the `blacklist-config.yaml` using [named-blacklist](https://github.com/Luzifer/named-blacklist) blocking quite a lot of crap
 
 As soon as you build and roll this DNS container and set your system to use it you should notice a lot of ad- and tracking requests to be gone even for example on your Android device where adblockers does not work that well. Also all connected devices can access any domain registered within the OpenNIC TLDs.
 
