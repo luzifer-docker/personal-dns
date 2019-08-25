@@ -23,7 +23,11 @@ done
 cat blacklist.local >>${target}
 
 # Convert into named response-policy file
-cp blacklist.tpl named.${target}
+korvike \
+	-i blacklist.tpl \
+	-o named.${target} \
+	-v version=$(git describe --tags --always)
+
 awk '/^0.0.0.0/{ printf "%s  CNAME .\n", $2 }' blacklist |
 	grep -v '^0.0.0.0  ' |
 	sort >>named.${target}

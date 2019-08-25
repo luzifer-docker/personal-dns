@@ -9,7 +9,9 @@ RUN set -ex \
       curl \
       git \
       make \
- && go get -v github.com/Luzifer/rootzone \
+ && go get -v \
+      github.com/Luzifer/korvike\
+      github.com/Luzifer/rootzone \
  && rootzone >named.stubs \
  && make blacklist
 
@@ -36,6 +38,6 @@ COPY                docker-entrypoint.sh  /usr/local/bin/
 EXPOSE 53/udp 53
 
 HEALTHCHECK --interval=30s --timeout=5s \
-  CMD dig +short @localhost health.server.test A || exit 1
+  CMD dig +short @localhost health.pdns.luzifer.io A || exit 1
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
