@@ -20,63 +20,8 @@ providers:
     action: whitelist
     type: domain-list
 
-  - name: Axel-Springer-Blocker # License: GPLv3, URL: https://github.com/revengeday/axelspringerblocker/
-    url: https://raw.githubusercontent.com/revengeday/axelspringerblocker/master/hosts
-    action: blacklist
-    type: domain-list
-
-  - name: Steven Black's ad-hoc list # License: MIT, URL: https://github.com/StevenBlack/hosts/blob/master/data/StevenBlack/hosts
-    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts
-    action: blacklist
-    type: hosts-file
-
-  - name: Malware Domain List # License: can be used for free by anyone, URL: https://www.malwaredomainlist.com/
-    url: https://www.malwaredomainlist.com/hostslist/hosts.txt
-    action: blacklist
-    type: hosts-file
-
-  - name: add.Dead # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
-    url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Dead/hosts
-    action: blacklist
-    type: hosts-file
-
-  - name: hostsVN # License: MIT, URL: https://github.com/bigdargon/hostsVN
-    url: https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hosts-VN
-    action: blacklist
-    type: hosts-file
-
-  - name: add.Spam # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
-    url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
-    action: blacklist
-    type: hosts-file
-
-  - name: Dan Pollock - someonewhocares # License: non-commercial with attribution, URL:https://someonewhocares.org/hosts/
-    url: https://someonewhocares.org/hosts/zero/hosts
-    action: blacklist
-    type: hosts-file
-
-  - name: MVPS hosts file # License: CC BY-NC-SA 4.0, URL: http://winhelp2002.mvps.org/
-    url: http://winhelp2002.mvps.org/hosts.txt
-    action: blacklist
-    type: hosts-file
-
-  - name: yoyo.org # URL: https://pgl.yoyo.org/adservers/
-    url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
-    action: blacklist
-    type: hosts-file
-
-  - name: Mitchell Krog's - Badd Boyz Hosts # License: non-commercial with attribution, URL: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
-    url: https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
-    action: blacklist
-    type: hosts-file
-
-  - name: CoinBlocker # License: GPLv3, URL: https://gitlab.com/ZeroDot1/CoinBlockerLists
-    url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
-    action: blacklist
-    type: hosts-file
-
-  - name: UncheckyAds # URL: https://github.com/FadeMind/hosts.extras
-    url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts
+  - name: AdAway # License: CC BY 3.0, URL: https://adaway.org/
+    url: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
     action: blacklist
     type: hosts-file
 
@@ -85,13 +30,8 @@ providers:
     action: blacklist
     type: hosts-file
 
-  - name: KADhosts # License: GPLv3, URL: https://github.com/azet12/KADhosts
-    url: https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt
-    action: blacklist
-    type: hosts-file
-
-  - name: AdAway # License: CC BY 3.0, URL: https://adaway.org/
-    url: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+  - name: add.Dead # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
+    url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Dead/hosts
     action: blacklist
     type: hosts-file
 
@@ -100,8 +40,68 @@ providers:
     action: blacklist
     type: hosts-file
 
+  - name: add.Spam # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
+    url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
+    action: blacklist
+    type: hosts-file
+
+  - name: Axel-Springer-Blocker # License: GPLv3, URL: https://github.com/revengeday/axelspringerblocker/
+    url: https://raw.githubusercontent.com/revengeday/axelspringerblocker/master/hosts
+    action: blacklist
+    type: domain-list
+
+  - name: CoinBlocker # License: GPLv3, URL: https://gitlab.com/ZeroDot1/CoinBlockerLists
+    url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
+    action: blacklist
+    type: hosts-file
+
+  - name: Dan Pollock - someonewhocares # License: non-commercial with attribution, URL:https://someonewhocares.org/hosts/
+    url: https://someonewhocares.org/hosts/zero/hosts
+    action: blacklist
+    type: hosts-file
+
+  - name: hostsVN # License: MIT, URL: https://github.com/bigdargon/hostsVN
+    url: https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hosts-VN
+    action: blacklist
+    type: hosts-file
+
+  - name: KADhosts # License: GPLv3, URL: https://github.com/azet12/KADhosts
+    url: https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: Malware Domain List # License: can be used for free by anyone, URL: https://www.malwaredomainlist.com/
+    url: https://www.malwaredomainlist.com/hostslist/hosts.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: Mitchell Krog's - Badd Boyz Hosts # License: non-commercial with attribution, URL: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
+    url: https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
+    action: blacklist
+    type: hosts-file
+
+  - name: MVPS hosts file # License: CC BY-NC-SA 4.0, URL: http://winhelp2002.mvps.org/
+    url: http://winhelp2002.mvps.org/hosts.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: Steven Black's ad-hoc list # License: MIT, URL: https://github.com/StevenBlack/hosts/blob/master/data/StevenBlack/hosts
+    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts
+    action: blacklist
+    type: hosts-file
+
   - name: Tiuxo hostlist - ads # License: CC BY 4.0, URL: https://github.com/tiuxo/hosts
     url: https://raw.githubusercontent.com/tiuxo/hosts/master/ads
+    action: blacklist
+    type: hosts-file
+
+  - name: UncheckyAds # URL: https://github.com/FadeMind/hosts.extras
+    url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts
+    action: blacklist
+    type: hosts-file
+
+  - name: yoyo.org # URL: https://pgl.yoyo.org/adservers/
+    url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
     action: blacklist
     type: hosts-file
 
