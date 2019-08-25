@@ -20,6 +20,11 @@ providers:
     action: whitelist
     type: domain-list
 
+  - name: Axel-Springer-Blocker # License: GPLv3, URL: https://github.com/revengeday/axelspringerblocker/
+    url: https://raw.githubusercontent.com/revengeday/axelspringerblocker/master/hosts
+    action: blacklist
+    type: domain-list
+
   - name: Steven Black's ad-hoc list # License: MIT, URL: https://github.com/StevenBlack/hosts/blob/master/data/StevenBlack/hosts
     url: https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts
     action: blacklist
