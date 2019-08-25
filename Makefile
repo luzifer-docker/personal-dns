@@ -1,4 +1,4 @@
 default:
 
 blacklist:
-	bash build_blacklist.sh
+	bash -x build_blacklist.sh

@@ -1,5 +1,2 @@
-# Server health check address - not to be removed
-0.0.0.0 health.server.test
-
 # Block TAZ
 0.0.0.0 taz.de

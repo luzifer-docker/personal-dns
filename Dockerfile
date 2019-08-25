@@ -17,9 +17,6 @@ RUN set -ex \
 
 FROM alpine:latest
 
-ENV DNSMASQ_HOSTSFILE=/etc/bind/blacklist \
-    DNSMASQ_POLL=60
-
 LABEL maintainer Knut Ahlers <knut@ahlers.me>
 
 COPY build.sh /usr/local/bin/
@@ -31,12 +28,10 @@ RUN set -ex \
       bind-tools \
  && /usr/local/bin/build.sh
 
-COPY --from=builder /src/named.stubs /etc/bind/
-COPY --from=builder /src/blacklist /etc/bind/
-
-COPY named.conf /etc/bind/
-COPY Corefile /etc/
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY --from=builder /src/named.stubs      /etc/bind/
+COPY --from=builder /src/named.blacklist  /etc/bind/
+COPY                named.conf            /etc/bind/
+COPY                docker-entrypoint.sh  /usr/local/bin/
 
 EXPOSE 53/udp 53
 
