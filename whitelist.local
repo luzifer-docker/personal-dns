@@ -1,0 +1,3 @@
+# Unblock 4SQ API (breaks Swarm)
+# https://github.com/AdAway/AdAway/issues/1560
+api.foursquare.com 
