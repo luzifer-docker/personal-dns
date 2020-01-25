@@ -10,6 +10,7 @@ RUN set -ex \
       git \
       make \
  && go get -v \
+      github.com/Luzifer/bind-log-metrics \
       github.com/Luzifer/named-blacklist \
       github.com/Luzifer/rootzone \
  && rootzone >named.stubs \
@@ -30,10 +31,11 @@ RUN set -ex \
       bind-tools \
  && /usr/local/bin/build.sh
 
-COPY --from=builder /src/named.stubs      /etc/bind/
-COPY --from=builder /src/named.blacklist  /etc/bind/
-COPY                named.conf            /etc/bind/
-COPY                docker-entrypoint.sh  /usr/local/bin/
+COPY --from=builder /go/bin/bind-log-metrics  /usr/local/bin/
+COPY --from=builder /src/named.stubs          /etc/bind/
+COPY --from=builder /src/named.blacklist      /etc/bind/
+COPY                named.conf                /etc/bind/
+COPY                docker-entrypoint.sh      /usr/local/bin/
 
 EXPOSE 53/udp 53
 
