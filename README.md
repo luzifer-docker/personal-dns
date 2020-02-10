@@ -24,6 +24,8 @@ $ docker build -t personal-dns .
 $ docker run --rm -ti -p 53:53 -p 53:53/udp personal-dns
 $ dig +short @<ip of your container> TXT version.pdns.luzifer.io
 "0ecb98c @ 2019-08-25 19:25:14 +00:00"
+$ dig +short @<ip of your container> TXT count.pdns.luzifer.io
+"128561"
 ```
 
 ### Connect your computer to the container
