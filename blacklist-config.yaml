@@ -60,6 +60,16 @@ providers:
     action: blacklist
     type: hosts-file
 
+  - name: Disconnect.me - Simple Ad # License: GPLv3, URL: https://disconnect.me
+    url: https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Disconnect.me - Simple Tracking # License: GPLv3, URL: https://disconnect.me
+    url: https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+    action: blacklist
+    type: domain-list
+
   - name: hostsVN # License: MIT, URL: https://github.com/bigdargon/hostsVN
     url: https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hosts-VN
     action: blacklist
@@ -69,6 +79,16 @@ providers:
     url: https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt
     action: blacklist
     type: hosts-file
+
+  - name: Malwarebytes - ATS # License: Custom EULA, URL: https://hosts-file.net/
+    url: https://hosts-file.net/ad_servers.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: Malware Domains # License: Free for non-commercial, DEPRECATED 2018, URL: http://www.malwaredomains.com/
+    url: https://mirror1.malwaredomains.com/files/justdomains
+    action: blacklist
+    type: domain-list
 
   - name: Malware Domain List # License: can be used for free by anyone, URL: https://www.malwaredomainlist.com/
     url: https://www.malwaredomainlist.com/hostslist/hosts.txt
@@ -87,6 +107,11 @@ providers:
 
   - name: Steven Black's ad-hoc list # License: MIT, URL: https://github.com/StevenBlack/hosts/blob/master/data/StevenBlack/hosts
     url: https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts
+    action: blacklist
+    type: hosts-file
+
+  - name: SysCtl # DEPRECATED 2018, URL: https://sysctl.org/cameleon/
+    url: http://sysctl.org/cameleon/hosts
     action: blacklist
     type: hosts-file
 
