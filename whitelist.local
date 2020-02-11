@@ -2,5 +2,6 @@
 # https://github.com/AdAway/AdAway/issues/1560
 api.foursquare.com 
 
-# Unblock countess to fix view-count / channel points
-countess.twitch.tv
+# Fix view-count / channel points
+spade.twitch.tv
+spade.sci.twitch.tv
