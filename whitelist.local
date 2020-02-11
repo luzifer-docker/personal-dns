@@ -1,3 +1,6 @@
 # Unblock 4SQ API (breaks Swarm)
 # https://github.com/AdAway/AdAway/issues/1560
 api.foursquare.com 
+
+# Unblock countess to fix view-count / channel points
+countess.twitch.tv
