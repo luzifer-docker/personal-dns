@@ -138,12 +138,12 @@ template: |
 
   ; Healthcheck record - don't remove
   health.pdns.luzifer.io    A     127.0.1.1
-  version.pdns.luzifer.io   TXT   "{{ env `GIT_VERSION` }} @ {{ now `2006-01-02 15:04:05 -07:00` }}"
-  count.pdns.luzifer.io     TXT   "{{ len .blacklist }}"
+  info.pdns.luzifer.io      TXT   "Build: {{ env `GIT_VERSION` }} @ {{ now `2006-01-02 15:04:05 -07:00` }}"
+  info.pdns.luzifer.io      TXT   "Entries: {{ len .blacklist }}"
 
   ; Blacklist entries
   {{ range .blacklist -}}
-  {{ to_punycode .Domain }} CNAME . ; {{ .Comment }}
+  {{ to_punycode .Domain }} CNAME . ; {{ join (sort .Comments) ", " }}
   {{ end }}
 
 ...
