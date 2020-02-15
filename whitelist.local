@@ -1,7 +1,3 @@
-# Unblock 4SQ API (breaks Swarm)
-# https://github.com/AdAway/AdAway/issues/1560
-api.foursquare.com 
-
 # Fix view-count / channel points
 spade.twitch.tv
 spade.sci.twitch.tv
