@@ -1,5 +1,7 @@
 FROM golang:alpine as builder
 
+ENV GO111MODULE=on
+
 COPY . /src
 WORKDIR /src
 
@@ -9,10 +11,7 @@ RUN set -ex \
       curl \
       git \
       make \
- && go get -v \
-      github.com/Luzifer/bind-log-metrics \
-      github.com/Luzifer/named-blacklist \
-      github.com/Luzifer/rootzone \
+ && bash /src/gotools.sh \
  && rootzone >named.stubs \
  && make blacklist
 
