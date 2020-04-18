@@ -80,11 +80,6 @@ providers:
     action: blacklist
     type: hosts-file
 
-  - name: Malwarebytes - ATS # License: Custom EULA, URL: https://hosts-file.net/
-    url: https://hosts-file.net/ad_servers.txt
-    action: blacklist
-    type: hosts-file
-
   - name: Malware Domains # License: Free for non-commercial, DEPRECATED 2018, URL: http://www.malwaredomains.com/
     url: https://mirror1.malwaredomains.com/files/justdomains
     action: blacklist
