@@ -58,11 +58,6 @@ providers:
     action: blacklist
     type: domain-list
 
-  - name: Badd Boyz Hosts # License: MIT License, URL: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
-    url: https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
-    action: blacklist
-    type: hosts-file
-
   - name: CoinBlocker # License: GPLv3, URL: https://gitlab.com/ZeroDot1/CoinBlockerLists
     url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
     action: blacklist
