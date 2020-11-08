@@ -1,13 +1,16 @@
 ---
 
 # List of third-party lists to download and include into generated
-# blacklist zone file (entries are just examples and copied from the
-# source of https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant)
+# blacklist zone file.
 # Please verify the list matches your interest or compile your own!
 # 
 # Whitelists are applied AFTER all blacklists are compiled together
 # which means an entry in the whitelist will finally remove the domain
 # from the whole blacklist. Provider order does not matter in this case.
+#
+# Sources of lists:
+# - https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant
+# - https://github.com/EnergizedProtection/block#package-sources
 providers:
 
   - name: Local blacklist
