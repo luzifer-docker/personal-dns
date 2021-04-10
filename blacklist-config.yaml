@@ -88,16 +88,6 @@ providers:
     action: blacklist
     type: hosts-file
 
-  - name: Malware Domains # License: Free for non-commercial, DEPRECATED 2018, URL: http://www.malwaredomains.com/
-    url: https://mirror1.malwaredomains.com/files/justdomains
-    action: blacklist
-    type: domain-list
-
-  - name: Malware Domain List # License: can be used for free by anyone, URL: https://www.malwaredomainlist.com/
-    url: https://www.malwaredomainlist.com/hostslist/hosts.txt
-    action: blacklist
-    type: hosts-file
-
   - name: Mitchell Krog's - Badd Boyz Hosts # License: non-commercial with attribution, URL: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
     url: https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
     action: blacklist
