@@ -2,19 +2,14 @@
 set -euxo pipefail
 
 packages=(
-	github.com/Luzifer/bind-log-metrics
-	github.com/Luzifer/named-blacklist
-	github.com/Luzifer/rootzone
+  github.com/Luzifer/bind-log-metrics@latest
+  github.com/Luzifer/named-blacklist@latest
+  github.com/Luzifer/rootzone@latest
 )
 
 for pkg in "${packages[@]}"; do
-	targetdir="/go/src/${pkg}"
-
-	# Get sources
-	git clone "https://${pkg}.git" "${targetdir}"
-
-	# Go to directory and install util
-	pushd "${targetdir}"
-	go install -mod=readonly
-	popd
+  go install \
+    -mod=readonly \
+    -modcacherw \
+    "${pkg}"
 done
