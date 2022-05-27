@@ -7,6 +7,8 @@ packages=(
   github.com/Luzifer/rootzone@latest
 )
 
+export GOPRIVATE=github.com/Luzifer
+
 for pkg in "${packages[@]}"; do
   go install \
     -mod=readonly \
