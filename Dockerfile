@@ -1,4 +1,4 @@
-FROM golang:alpine as builder
+FROM golang:alpine AS builder
 
 ENV GO111MODULE=on
 
@@ -19,7 +19,7 @@ RUN set -ex \
 
 FROM alpine:latest
 
-LABEL maintainer Knut Ahlers <knut@ahlers.me>
+LABEL maintainer=Knut Ahlers <knut@ahlers.me>
 
 COPY build.sh /usr/local/bin/
 
