@@ -1,5 +1,3 @@
-![](https://knut.in/project-status/personal-dns)
-
 # Luzifer / personal-dns
 
 `personal-dns` is a Bind9 DNS server in a container.
@@ -12,6 +10,8 @@ The purpose is to be fully independent from provider and third-party DNS servers
 - The container includes a blacklist generated from the `blacklist-config.yaml` using [named-blacklist](https://github.com/Luzifer/named-blacklist) blocking quite a lot of crap
 
 As soon as you build and roll this DNS container and set your system to use it you should notice a lot of ad- and tracking requests to be gone even for example on your Android device where adblockers does not work that well. Also all connected devices can access any domain registered within the OpenNIC TLDs.
+
+⚠️ Probably don't open this service to the internet. You will have **lots** of requests towards it, likely most of them with malicious intent. It's probably better to run this in a private protected network.
 
 ## Usage
 
@@ -30,5 +30,5 @@ $ dig +short @<ip of your container> TXT info.pdns.luzifer.io
 ### Connect your computer to the container
 
 - On **Mac OS** go into the System Preferences, Network, edit your LAN / WiFi connection, enter the IP your container is reachable into DNS settings
-- On **Android** I'm using the [DNS Changer](https://play.google.com/store/apps/details?id=com.frostnerd.dnschanger) App
 - On **Android 8+** there is a neat option called "Private DNS" in your "Wi-Fi & Internet" settings
+- On **Linux** just point your `resolv.conf` or dnsmasq or what ever you are using to the IP of the container
