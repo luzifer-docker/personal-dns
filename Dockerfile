@@ -1,6 +1,4 @@
-FROM golang:alpine as builder
-
-ENV GO111MODULE=on
+FROM golang:1.24-alpine AS builder
 
 COPY . /src
 WORKDIR /src
@@ -17,18 +15,22 @@ RUN set -ex \
 
 # ------
 
-FROM alpine:latest
+FROM alpine:3.22
 
-LABEL maintainer Knut Ahlers <knut@ahlers.me>
-
-COPY build.sh /usr/local/bin/
+LABEL org.opencontainers.image.title="personal-dns" \
+      org.opencontainers.image.description="personal-dns is a Bind9 DNS server in a container with privacy and adblock enabled" \
+      org.opencontainers.image.authors="Knut Ahlers <knut@ahlers.me>" \
+      org.opencontainers.image.url="https://git.luzifer.io/luzifer-docker/personal-dns" \
+      org.opencontainers.image.documentation="https://git.luzifer.io/luzifer-docker/personal-dns" \
+      org.opencontainers.image.source="https://git.luzifer.io/luzifer-docker/personal-dns" \
+      org.opencontainers.image.licenses="Apache-2.0"
 
 RUN set -ex \
  && apk --no-cache add \
       bash \
       bind \
       bind-tools \
- && /usr/local/bin/build.sh
+      dumb-init
 
 COPY --from=builder /go/bin/bind-log-metrics  /usr/local/bin/
 COPY --from=builder /src/named.stubs          /etc/bind/
