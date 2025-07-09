@@ -1,9 +1,8 @@
 ---
-
 # List of third-party lists to download and include into generated
 # blacklist zone file.
 # Please verify the list matches your interest or compile your own!
-# 
+#
 # Whitelists are applied AFTER all blacklists are compiled together
 # which means an entry in the whitelist will finally remove the domain
 # from the whole blacklist. Provider order does not matter in this case.
@@ -12,7 +11,6 @@
 # - https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant
 # - https://github.com/EnergizedProtection/block#package-sources
 providers:
-
   - name: Local blacklist
     file: blacklist.local
     action: blacklist
@@ -57,11 +55,6 @@ providers:
     url: https://raw.githubusercontent.com/revengeday/axelspringerblocker/master/hosts
     action: blacklist
     type: domain-list
-
-  - name: CoinBlocker # License: GPLv3, URL: https://gitlab.com/ZeroDot1/CoinBlockerLists
-    url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
-    action: blacklist
-    type: hosts-file
 
   - name: Dan Pollock - someonewhocares # License: non-commercial with attribution, URL:https://someonewhocares.org/hosts/
     url: https://someonewhocares.org/hosts/zero/hosts
@@ -138,5 +131,3 @@ template: |
   {{ range .blacklist -}}
   {{ to_punycode .Domain }} CNAME . ; {{ join (sort .Comments) ", " }}
   {{ end }}
-
-...
