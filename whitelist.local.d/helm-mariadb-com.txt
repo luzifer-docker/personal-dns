@@ -1,0 +1,2 @@
+# Fix helm.mariadb.com
+gateway.scarf.sh

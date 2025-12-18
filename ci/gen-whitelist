@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+tmpfile=$(mktemp -p . whitelist.local.XXXXXX)
+trap "rm -f ${tmpfile}" EXIT
+
+for chunk in whitelist.local.d/*.txt; do
+  cat ${chunk} >>${tmpfile}
+  echo >>${tmpfile}
+done
+
+for script in whitelist.local.d/*.sh; do
+  bash -euo pipefail ${script} >>${tmpfile}
+  echo >>${tmpfile}
+done
+
+mv ${tmpfile} whitelist.local
