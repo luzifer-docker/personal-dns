@@ -1,15 +1,3 @@
----
-# List of third-party lists to download and include into generated
-# blacklist zone file.
-# Please verify the list matches your interest or compile your own!
-#
-# Whitelists are applied AFTER all blacklists are compiled together
-# which means an entry in the whitelist will finally remove the domain
-# from the whole blacklist. Provider order does not matter in this case.
-#
-# Sources of lists:
-# - https://github.com/StevenBlack/hosts#sources-of-hosts-data-unified-in-this-variant
-# - https://github.com/EnergizedProtection/block#package-sources
 providers:
   - name: Local blacklist
     file: blacklist.local
@@ -21,92 +9,302 @@ providers:
     action: whitelist
     type: domain-list
 
-  - name: AdAway # License: CC BY 3.0, URL: https://adaway.org/
+  - name: AdAway  # License: CC BY 3.0, URL: https://adaway.org/
     url: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
     action: blacklist
     type: hosts-file
 
-  - name: add.2o7Net # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
+  - name: add.2o7Net  # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
     url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts
     action: blacklist
     type: hosts-file
 
-  - name: add.Dead # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
+  - name: add.Dead  # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
     url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Dead/hosts
     action: blacklist
     type: hosts-file
 
-  - name: add.Risk # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
+  - name: add.Risk  # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
     url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts
     action: blacklist
     type: hosts-file
 
-  - name: add.Spam # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
+  - name: add.Spam  # License: GPLv3+, URL: https://github.com/FadeMind/hosts.extras
     url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
     action: blacklist
     type: hosts-file
 
-  - name: Anudeep's Blacklist # License: MIT License, URL: https://github.com/anudeepND/blacklist
+  - name: Anudeep's Blacklist  # License: MIT License, URL: https://github.com/anudeepND/blacklist
     url: https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
     action: blacklist
     type: hosts-file
 
-  - name: Axel-Springer-Blocker # License: GPLv3, URL: https://github.com/revengeday/axelspringerblocker/
+  - name: Axel-Springer-Blocker  # License: GPLv3, URL: https://github.com/revengeday/axelspringerblocker/
     url: https://raw.githubusercontent.com/revengeday/axelspringerblocker/master/hosts
     action: blacklist
     type: domain-list
 
-  - name: Dan Pollock - someonewhocares # License: non-commercial with attribution, URL:https://someonewhocares.org/hosts/
+  - name: BBcan177
+    url: https://gist.githubusercontent.com/BBcan177/4a8bf37c131be4803cb2/raw
+    action: blacklist
+    type: domain-list
+
+  - name: blocklistproject - Malware  # License: MIT, URL: https://github.com/blocklistproject/Lists/
+    url: https://raw.githubusercontent.com/blocklistproject/Lists/master/malware.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: blocklistproject - Phishing  # License: MIT, URL: https://github.com/blocklistproject/Lists/
+    url: https://raw.githubusercontent.com/blocklistproject/Lists/master/phishing.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: blocklistproject - Ransomware  # License: MIT, URL: https://github.com/blocklistproject/Lists/
+    url: https://raw.githubusercontent.com/blocklistproject/Lists/master/ransomware.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: blocklistproject - Scam  # License: MIT, URL: https://github.com/blocklistproject/Lists/
+    url: https://raw.githubusercontent.com/blocklistproject/Lists/master/scam.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: botvrij - ioclist.domain
+    url: https://www.botvrij.eu/data/ioclist.domain.raw
+    action: blacklist
+    type: domain-list
+
+  - name: botvrij - ioclist.hostname
+    url: https://www.botvrij.eu/data/ioclist.hostname.raw
+    action: blacklist
+    type: domain-list
+
+  - name: crpietschmann - Facebook  # License: MIT, URL: https://github.com/crpietschmann/pi-hole-blocklist
+    url: https://raw.githubusercontent.com/crpietschmann/pi-hole-blocklist/main/social-media/blocklist-social-facebook.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: crpietschmann - Periscope  # License: MIT, URL: https://github.com/crpietschmann/pi-hole-blocklist
+    url: https://raw.githubusercontent.com/crpietschmann/pi-hole-blocklist/main/social-media/blocklist-social-periscope.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: crpietschmann - Wechat  # License: MIT, URL: https://github.com/crpietschmann/pi-hole-blocklist
+    url: https://raw.githubusercontent.com/crpietschmann/pi-hole-blocklist/main/social-media/blocklist-social-wechat.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: crpietschmann - Whisper  # License: MIT, URL: https://github.com/crpietschmann/pi-hole-blocklist
+    url: https://raw.githubusercontent.com/crpietschmann/pi-hole-blocklist/main/social-media/blocklist-social-whisper.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: Dan Pollock - someonewhocares  # License: non-commercial with attribution, URL:https://someonewhocares.org/hosts/
     url: https://someonewhocares.org/hosts/zero/hosts
     action: blacklist
     type: hosts-file
 
-  - name: Disconnect.me - Simple Ad # License: GPLv3, URL: https://disconnect.me
+  - name: Disconnect.me - Simple Ad  # License: GPLv3, URL: https://disconnect.me
     url: https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
     action: blacklist
     type: domain-list
 
-  - name: Disconnect.me - Simple Tracking # License: GPLv3, URL: https://disconnect.me
+  - name: Disconnect.me - Simple Tracking  # License: GPLv3, URL: https://disconnect.me
     url: https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
     action: blacklist
     type: domain-list
 
-  - name: hostsVN # License: MIT, URL: https://github.com/bigdargon/hostsVN
+  - name: Firebog - AdguardDNS
+    url: https://v.firebog.net/hosts/AdguardDNS.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Firebog - Admiral
+    url: https://v.firebog.net/hosts/Admiral.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Firebog - Easylist
+    url: https://v.firebog.net/hosts/Easylist.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Firebog - Easyprivacy
+    url: https://v.firebog.net/hosts/Easyprivacy.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Firebog - Prigent-Ads
+    url: https://v.firebog.net/hosts/Prigent-Ads.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Firebog - w3kbl  # License: CC-BY-4.0
+    url: https://v.firebog.net/hosts/static/w3kbl.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Geoffrey Frogeye's block list of first-party trackers  # License: MIT
+    url: https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: Geoffrey Frogeye's block list of multi-party trackers  # License: MIT
+    url: https://hostfiles.frogeye.fr/multiparty-trackers-hosts.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: hectorm - Phishing  # License: MIT, URL: https://github.com/hectorm/hmirror/
+    url: https://raw.githubusercontent.com/hectorm/hmirror/master/data/eth-phishing-detect/list.txt
+    action: blacklist
+    type: domain-list
+
+  - name: hostsVN  # License: MIT, URL: https://github.com/bigdargon/hostsVN
     url: https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hosts-VN
     action: blacklist
     type: hosts-file
 
-  - name: KADhosts # License: GPLv3, URL: https://github.com/azet12/KADhosts
+  - name: KADhosts  # License: GPLv3, URL: https://github.com/azet12/KADhosts
     url: https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt
     action: blacklist
     type: hosts-file
 
-  - name: Mitchell Krog's - Badd Boyz Hosts # License: non-commercial with attribution, URL: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
+  - name: Lightswitch05's ads-and-tracking-extended.txt  # License: Apache-2.0
+    url: https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt
+    action: blacklist
+    type: hosts-file
+
+  - name: Mailborder - Phishing Bad Sites
+    url: http://phishing.mailscanner.info/phishing.bad.sites.conf
+    action: blacklist
+    type: domain-list
+
+  - name: Mitchell Krog's - Badd Boyz Hosts  # License: non-commercial with attribution, URL: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
     url: https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
     action: blacklist
     type: hosts-file
 
-  - name: MVPS hosts file # License: CC BY-NC-SA 4.0, URL: http://winhelp2002.mvps.org/
+  - name: MVPS hosts file  # License: CC BY-NC-SA 4.0, URL: http://winhelp2002.mvps.org/
     url: http://winhelp2002.mvps.org/hosts.txt
     action: blacklist
     type: hosts-file
 
-  - name: Steven Black's ad-hoc list # License: MIT, URL: https://github.com/StevenBlack/hosts/blob/master/data/StevenBlack/hosts
+  - name: Perflist - Amazon FireTV  # License: MIT, URL: https://github.com/Perflyst/PiHoleBlocklist
+    url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Perflist - Android Tracking  # License: MIT, URL: https://github.com/Perflyst/PiHoleBlocklist
+    url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Perflist - Smart-TV Blocklist for Pi-hole  # License: MIT, URL: https://github.com/Perflyst/PiHoleBlocklist
+    url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Phishing Army - Phishing  # License: CC-BY-NC-4.0
+    url: https://phishing.army/download/phishing_army_blocklist_extended.txt
+    action: blacklist
+    type: domain-list
+
+  - name: RooneyMcNibNug - SNAFU  # License: ???, URL: https://github.com/RooneyMcNibNug/pihole-stuff
+    url: https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt
+    action: blacklist
+    type: domain-list
+
+  - name: RPiList - crypto  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/crypto
+    action: blacklist
+    type: adblock-plus
+
+  - name: RPiList - easylist  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/easylist
+    action: blacklist
+    type: domain-list
+
+  - name: RPiList - Malware  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/malware
+    action: blacklist
+    type: adblock-plus
+
+  - name: RPiList - MS Office Telemetry  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/MS-Office-Telemetry
+    action: blacklist
+    type: domain-list
+
+  - name: RPiList - notserious  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/notserious
+    action: blacklist
+    type: adblock-plus
+
+  - name: RPiList - Phishing-Angriffe  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
+    action: blacklist
+    type: adblock-plus
+
+  - name: RPiList - Samsung  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/samsung
+    action: blacklist
+    type: domain-list
+
+  - name: RPiList - Spam Mails  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
+    action: blacklist
+    type: adblock-plus
+
+  - name: RPiList - Streaming  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Streaming
+    action: blacklist
+    type: adblock-plus
+
+  - name: RPiList - Windows 10 Telemetry  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Win10Telemetry
+    action: blacklist
+    type: domain-list
+
+  - name: Steven Black's ad-hoc list  # License: MIT, URL: https://github.com/StevenBlack/hosts/blob/master/data/StevenBlack/hosts
     url: https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts
     action: blacklist
     type: hosts-file
 
-  - name: Tiuxo hostlist - ads # License: CC BY 4.0, URL: https://github.com/tiuxo/hosts
+  - name: Technoy - Blocklist  # License: CC-BY-SA-4.0
+    url: https://www.technoy.de/lists/blocklist.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Technoy - Fake Streaming
+    url: https://www.technoy.de/lists/fake-streaming.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Technoy - FireTVAds
+    url: https://www.technoy.de/lists/FireTVAds.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Technoy - Session-Replay
+    url: https://www.technoy.de/lists/Session-Replay.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Technoy - Suspicious
+    url: https://www.technoy.de/lists/Suspicious.txt
+    action: blacklist
+    type: domain-list
+
+  - name: Tiuxo hostlist - ads  # License: CC BY 4.0, URL: https://github.com/tiuxo/hosts
     url: https://raw.githubusercontent.com/tiuxo/hosts/master/ads
     action: blacklist
     type: hosts-file
 
-  - name: UncheckyAds # URL: https://github.com/FadeMind/hosts.extras
+  - name: UncheckyAds  # URL: https://github.com/FadeMind/hosts.extras
     url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts
     action: blacklist
     type: hosts-file
 
-  - name: yoyo.org # URL: https://pgl.yoyo.org/adservers/
+  - name: yoyo.org  # URL: https://pgl.yoyo.org/adservers/
     url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
     action: blacklist
     type: hosts-file
