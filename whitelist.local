@@ -4,3 +4,9 @@ spade.sci.twitch.tv
 
 # Fix Twitter Short-Links
 t.co
+
+# Fix helm.mariadb.com
+gateway.scarf.sh
+
+# Fix AWS S3
+s3.amazonaws.com
