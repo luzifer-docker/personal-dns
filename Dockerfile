@@ -40,7 +40,7 @@ COPY                docker-entrypoint.sh      /usr/local/bin/
 
 EXPOSE 53/udp 53
 
-HEALTHCHECK --interval=30s --timeout=5s \
+HEALTHCHECK --interval=30s --timeout=5s --start-period=2m \
   CMD dig +short @localhost health.pdns.luzifer.io A || exit 1
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
