@@ -1,0 +1,5 @@
+# Substack sends annoying mails but blocking their resolvability does
+# not help that. It just breaks substack hosted blogs / comics.
+
+substack.com
+substackcdn.com
