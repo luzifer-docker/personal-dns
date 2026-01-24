@@ -174,11 +174,6 @@ providers:
     action: blacklist
     type: hosts-file
 
-  - name: Mailborder - Phishing Bad Sites
-    url: http://phishing.mailscanner.info/phishing.bad.sites.conf
-    action: blacklist
-    type: domain-list
-
   - name: Mitchell Krog's - Badd Boyz Hosts  # License: non-commercial with attribution, URL: https://github.com/mitchellkrogza/Badd-Boyz-Hosts
     url: https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
     action: blacklist
