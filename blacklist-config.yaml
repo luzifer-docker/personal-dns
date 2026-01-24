@@ -304,11 +304,6 @@ providers:
     action: blacklist
     type: hosts-file
 
-  - name: yoyo.org  # URL: https://pgl.yoyo.org/adservers/
-    url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
-    action: blacklist
-    type: hosts-file
-
 template: |
   $TTL 1H
 
