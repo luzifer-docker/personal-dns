@@ -1,0 +1,14 @@
+# Fix LastFM
+
+aa.last.fm
+beta.last.fm
+blog.last.fm
+cdn.last.fm
+m.last.fm
+montage.last.fm
+musicmanager.last.fm
+saa.last.fm
+secure.last.fm
+static-web.last.fm
+www.last.fm
+www.lastfm.de
