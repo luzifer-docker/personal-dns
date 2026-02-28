@@ -39,11 +39,6 @@ providers:
     action: blacklist
     type: hosts-file
 
-  - name: Axel-Springer-Blocker  # License: GPLv3, URL: https://github.com/revengeday/axelspringerblocker/
-    url: https://raw.githubusercontent.com/revengeday/axelspringerblocker/master/hosts
-    action: blacklist
-    type: domain-list
-
   - name: BBcan177
     url: https://gist.githubusercontent.com/BBcan177/4a8bf37c131be4803cb2/raw
     action: blacklist
