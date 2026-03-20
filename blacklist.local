@@ -1,4 +1,30 @@
 taz.de
+www.facebook.com
 
 # Prevent apps from leaking device infos
 graph.facebook.com
+
+# Restore high-confidence tracker / telemetry regressions
+activity.windows.com
+analytics.languagetoolplus.com
+app-analytics-services.com
+assets.adobedtm.com
+beacons.gcp.gvt2.com
+beacons.gvt2.com
+cdn.confiant-integrations.net
+check.analytics.rlcdn.com
+eu-office.events.data.microsoft.com
+ib.adnxs-simple.com
+mobile.events.data.microsoft.com
+mobile.pipe.aria.microsoft.com
+o205439.ingest.sentry.io
+o265433.ingest.sentry.io
+o427061.ingest.sentry.io
+o64374.ingest.sentry.io
+ogads-pa.clients6.google.com
+remote-data.asnapieu.com
+sentry.io
+settings-win.data.microsoft.com
+sleeknotecustomerscripts.sleeknote.com
+sr-client-cfg.amplitude.com
+use1-turn.fpjs.io
