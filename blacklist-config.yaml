@@ -71,24 +71,6 @@ providers:
     type: domain-list
     min_matches: 1
 
-  - name: RPiList - Malware  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
-    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/malware
-    action: blacklist
-    type: adblock-plus
-    min_matches: 1
-
-  - name: RPiList - Phishing-Angriffe  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
-    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
-    action: blacklist
-    type: adblock-plus
-    min_matches: 1
-
-  - name: RPiList - Spam Mails  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
-    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
-    action: blacklist
-    type: adblock-plus
-    min_matches: 1
-
   ###
   # Privacy / nuisance: ads, tracking, replay, basic telemetry
   ###
@@ -225,10 +207,28 @@ providers:
     type: domain-list
     min_matches: 2
 
+  - name: RPiList - Malware  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/malware
+    action: blacklist
+    type: adblock-plus
+    min_matches: 2
+
   - name: RPiList - MS Office Telemetry  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
     url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/MS-Office-Telemetry
     action: blacklist
     type: domain-list
+    min_matches: 2
+
+  - name: RPiList - Phishing-Angriffe  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
+    action: blacklist
+    type: adblock-plus
+    min_matches: 2
+
+  - name: RPiList - Spam Mails  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
+    url: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
+    action: blacklist
+    type: adblock-plus
     min_matches: 2
 
   - name: RPiList - Windows 10 Telemetry  # License: CC-BY-NC-4.0, URL: https://github.com/RPiList/specials
